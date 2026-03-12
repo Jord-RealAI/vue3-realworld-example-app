@@ -20,7 +20,9 @@ jobs:
           cache: pnpm
 
       - name: enable pnpm
-        run: corepack enable
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
 
       - name: build project
         run: |
